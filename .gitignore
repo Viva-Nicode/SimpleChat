@@ -1,3 +1,5 @@
 Info.plist
 GoogleService-Info.plist
 Assets.xcassets/
+SimpleChat.entitlements
+SimpleChat.xcodeproj
