@@ -1,0 +1,18 @@
+*.xcstrings
+
+# Xcode project & configuration
+*.xcodeproj
+Info.plist
+*-Info.plist
+
+# Test plans
+*.xctestplan
+
+# Core Data
+*.xcdatamodeld
+
+# Entitlements
+*.entitlements
+
+# Firebase
+GoogleService-Info.plist
