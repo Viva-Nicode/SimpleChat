@@ -16,3 +16,5 @@ Info.plist
 
 # Firebase
 GoogleService-Info.plist
+
+*.xcassets
