@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="23C64" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="ChatMessageEntity" representedClassName="ChatMessageEntity" syncable="YES">
+        <attribute name="chatid" optional="YES" attributeType="String"/>
+        <attribute name="detail" attributeType="String"/>
+        <attribute name="readusers" attributeType="String"/>
+        <attribute name="timestamp" attributeType="String"/>
+        <attribute name="writer" attributeType="String"/>
+        <relationship name="chatroomid" maxCount="1" deletionRule="Nullify" destinationEntity="ChatRoomEntity" inverseName="messages" inverseEntity="ChatRoomEntity"/>
+    </entity>
+    <entity name="ChatRoomEntity" representedClassName="ChatRoomEntity" syncable="YES">
+        <attribute name="audiencelist" attributeType="String"/>
+        <attribute name="chatroomid" attributeType="String"/>
+        <attribute name="detail" attributeType="String"/>
+        <attribute name="timestamp" attributeType="String"/>
+        <attribute name="unreadcount" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="messages" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ChatMessageEntity" inverseName="chatroomid" inverseEntity="ChatMessageEntity"/>
+    </entity>
+    <entity name="FriendEntity" representedClassName=".FriendEntity" syncable="YES">
+        <attribute name="email" attributeType="String"/>
+        <attribute name="group" attributeType="String"/>
+    </entity>
+    <entity name="StoredNotiEntity" representedClassName=".StoredNotiEntity" syncable="YES">
+        <attribute name="from" attributeType="String"/>
+        <attribute name="notitype" attributeType="String"/>
+        <attribute name="timestamp" attributeType="String"/>
+    </entity>
+</model>
