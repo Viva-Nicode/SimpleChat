@@ -197,7 +197,7 @@ struct FullScreenChatPhotoView: View {
             shouldShowControlbar.toggle()
             isActiveControlButtons = isActiveControlButtons.map { _ in false }
         }.alert(isPresented: $shouldShowPermissionAlert) {
-            Alert(title: Text("Permission required"), message: Text("Please allow photo permissions in in-app settings"))
+            Alert(title: Text("Permission required"), message: Text("Please allow photo permissions in in-app setting"))
         }.onChange(of: reactions) { ov, nv in
             if let email: String = UserDefaultsKeys.userEmail.value() {
                 self.myReaction = (nv.reactionTable[imagePath!] ?? []).filter { $0.email == email }.first
