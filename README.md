@@ -21,7 +21,7 @@
 ## 🛠 프레임워크
 
 - Swift
-- SwiftUI
+- Swiftui
 - Combine / Swift Concurrency
 - Alamofire
 - Local Data (UserDefaults / CoreData / 기타)
